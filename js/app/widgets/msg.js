@@ -5,6 +5,8 @@ export const msg = {
             success:"", 
             t1:"", 
             t2:"", 
+            confirmTitle: "Please confirm next action", 
+            confirm:"",
             code: 0, 
             interval:"" 
         } 
@@ -98,7 +100,7 @@ export const msg = {
                     <i class="fas fa-check-circle"></i> {{success}} 
                 </div> 
             </div> 
-            <popup ref="confirm" title="confirmTitle">
+            <popup ref="confirm" :title="confirmTitle">
                 <div class="_al">
                     <i class="fas fa-info-circle"></i> {{confirm}}
                     <div class="botBtns">
