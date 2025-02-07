@@ -3,16 +3,16 @@ export const popup = {
     data() {
       return { active: 0, top: 0, widthVal: '500px', ml: '-250px', left: '50%', height: 'auto' };
     },
-    watch: {
-      active: function (o, n) {
+    watch:{
+      active:function(o,n) {
         if (o == 1 && !this.fullscreen) {
           var self = this;
           setTimeout(function () {
-            let height = self.$refs.popup.clientHeight / 2;
+            let height = self.$refs.popup.clientHeight/2;
             self.top = "calc(50% - " + height + "px)";
           }, 10);
         }
-  
+
         if (this.fullscreen) {
           this.top = 0;
           this.widthVal = '100%';
@@ -41,4 +41,3 @@ export const popup = {
       </template>
     `
   };
-  
