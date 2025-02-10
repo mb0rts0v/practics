@@ -31,7 +31,7 @@ export var img = {
                     <img :src="value" class="im">
                 </span>
                 <span v-if="!value">
-                    <img :src="this.parent.url+'/app/views/images/placeholder.png'">
+                    <img :src="'./images/placeholder.png'">
                 </span>
             </a>
         </div>
