@@ -1,28 +1,27 @@
-export const header = { 
-    data: function () { 
-        return { 
-            user: {}, 
-            parent:"", 
-            active:0, 
-            menu:0 
-        } 
-    }, 
-    watch:{ 
-    },  
-    mounted() { 
-        this.parent = this.$parent.$parent.$parent; ; 
+export const header = {
+    data: function() {
+      return {
+        user: {},
+        parent: "",
+        active: 0,
+        menu: 0
+      }
     },
-    methods:{ 
-        toogleActive(){ 
-            if(this.active==1){ 
-                this.active = 0; 
-            }else{ 
-                this.active = 1;
-            }
+    watch: {},
+    mounted() {
+      this.parent = this.$parent.$parent.$parent;
+    },
+    methods: {
+      toogleActive(){
+        if(this.active==1){
+          this.active = 0;
+        }else{
+          this.active = 1;
         }
-    }, 
+      }
+    },
     template: `
-        <header class="header">
+<header class="header">
     <div class="wrapper">
         <div class="flex">
             <div class="w20 logo">
@@ -61,4 +60,4 @@ export const header = {
     <msg ref="msg"/>
 </header>
     `
-}; 
+  };
